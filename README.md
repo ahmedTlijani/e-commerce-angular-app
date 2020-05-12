@@ -9,9 +9,61 @@
 Screenshots
 ------------
 
+### Home page
+
 <p align="center">
     <img src="https://github.com/ahmedTlijani/e-commerce-angular-app/blob/master/images/home.JPG">
 </p>
+
+### Manage Products
+
+<p align="center">
+    <img src="https://github.com/ahmedTlijani/e-commerce-angular-app/blob/master/images/gestion%20admin.JPG">
+</p>
+
+### Product List
+
+<p align="center">
+    <img src="https://github.com/ahmedTlijani/e-commerce-angular-app/blob/master/images/liste%20de%20produit.JPG">
+</p>
+
+
+### Add product
+
+<p align="center">
+    <img src="https://github.com/ahmedTlijani/e-commerce-angular-app/blob/master/images/add%20product.JPG">
+</p>
+
+### Update product
+
+<p align="center">
+    <img src="https://github.com/ahmedTlijani/e-commerce-angular-app/blob/master/images/update.JPG">
+</p>
+
+### Favourite list empty
+
+<p align="center">
+    <img src="https://github.com/ahmedTlijani/e-commerce-angular-app/blob/master/images/fav%20empty.JPG">
+</p>
+
+### Favourite list full
+
+<p align="center">
+    <img src="https://github.com/ahmedTlijani/e-commerce-angular-app/blob/master/images/fav%20full.JPG">
+</p>
+
+### Shopcart empty
+
+<p align="center">
+    <img src="https://github.com/ahmedTlijani/e-commerce-angular-app/blob/master/images/panier%20empty.JPG">
+</p>
+
+### Shopcart full
+
+<p align="center">
+    <img src="https://github.com/ahmedTlijani/e-commerce-angular-app/blob/master/images/panier%20full.JPG">
+</p>
+
 
 
 # NgProductsApp
