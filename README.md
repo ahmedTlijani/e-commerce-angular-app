@@ -1,3 +1,10 @@
+#E-comerce
+
+(E-commerce application developed using angular and symfony frameworks)
+
+##The client app Using Angular framework
+
+
 # NgProductsApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.1.
