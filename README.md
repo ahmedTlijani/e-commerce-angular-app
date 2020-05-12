@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # NgProductsApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.1.
@@ -25,3 +26,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# E-comerce
+(E-commerce application developed using angular and symfony frameworks)
+
+## The client app Using Angular framework
+>>>>>>> 8ff7d369041aad98cd6a3ca5e7654c851f1471d7
