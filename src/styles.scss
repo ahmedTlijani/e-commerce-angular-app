@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.fill-space {
+    // This fills the remaining space, by using flexbox.
+    // Every toolbar row uses a flexbox row layout.
+    flex: 1 1 auto;
+}
+
+.separateur-card{
+    height: 50px;
+}
+
+.bestproduct{
+    font-size: 21px;
+    color: #3f51b5;
+    font-weight: 500;
+    border-left: #3f51b5 solid 6px;
+    padding: 10px;
+}
+.btnbest{
+    padding-right: 10px; 
+}
+
+.mat-toolbar.mat-primary {
+    background: #10499a !important;
+    color: #fff;
+}
+.mat-fab.mat-primary, .mat-flat-button.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary {
+    background-color: #10499a !important;
+}

@@ -1,0 +1,24 @@
+<div class="example-1 card">
+  <div [ngStyle]="{'background': 'url(' + product.img_src + ')'}" class="wrapper"><!--20% 1%/cover no-repeat; -->
+    <div class="date">
+      <span class="day">{{product.price}} TND</span> 
+    </div>
+    <div class="data">
+      <div class="content">
+        <span class="author">{{ product.title }}</span>
+        <h1 class="title">{{ product.description }}</h1>
+        <div style="margin-bottom: 10px;">{{ product.purchase_number }} vendus</div>
+        <p class="text">
+            <button mat-flat-button color="primary" (click)="add_product_panier()">Ajouter au panier<mat-icon >shopping_cart</mat-icon></button>
+        </p>
+         <label for="show-menu" class="menu-button">
+            <button mat-icon-button color="warn" (click)="set_favorite()"><mat-icon>
+                <div *ngIf="favorite;then favorite_icon else favorite_border_icon">here is ignored</div>    
+                <ng-template #favorite_icon>favorite</ng-template>
+                <ng-template #favorite_border_icon>favorite_border</ng-template>
+            </mat-icon></button><!--change to favorite when click-->
+         </label>
+      </div>
+    </div>
+  </div>
+</div>

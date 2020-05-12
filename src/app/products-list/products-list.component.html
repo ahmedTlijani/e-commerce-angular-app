@@ -1,0 +1,17 @@
+<div class="separateur-card"></div>
+
+<div class="see-favorite__">
+  <div style="display:flex;">
+    <div class="bestproduct">Liste de produits</div>
+    <button mat-flat-button color="primary">Voir les produits favori</button>
+
+    <span class="fill-space"></span>
+    <div class="btnbest"><!--right content--></div>
+  </div>
+</div>
+
+<div style="display:flex;flex-wrap: wrap;padding-left: 60px;">    
+    <app-product *ngFor="let product_ of products_list" [product]="product_" ></app-product>  
+</div>
+
+<div class="separateur-card"></div>

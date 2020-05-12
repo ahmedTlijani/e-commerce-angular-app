@@ -1,0 +1,94 @@
+
+<div style="margin-top: 30px;margin-bottom: 30px;">
+
+<div style="margin-left: 120px;">
+  <button mat-flat-button (click)="insertProduct()">Ajouter un produit</button>
+
+
+  <mat-form-field style="margin-left: 20px;width: 200px" >
+      <input matInput type="text" [(ngModel)]="searchKey" (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      <button mat-button *ngIf="searchKey" matSuffix mat-icon-button aria-label="Clear" (click)="onSearchClear()">
+        <mat-icon>close</mat-icon>
+      </button>
+   </mat-form-field>
+
+    
+</div>
+
+
+
+<div class="mat-elevation-z8">
+    
+<table mat-table [dataSource]="dataSource" matSort>
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="id" >
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+  </ng-container>
+
+  <!-- Description Column -->
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
+    <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+  </ng-container>
+
+  <!-- Quatity Column -->
+  <ng-container matColumnDef="qte">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Quantity </th>
+    <td mat-cell *matCellDef="let element"> {{element.qte}} </td>
+  </ng-container>
+
+  <!-- Price Column -->
+  <ng-container matColumnDef="price">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
+    <td mat-cell *matCellDef="let element"> {{element.price}} TND </td>
+  </ng-container>
+
+  <!-- Purchaed number Column -->
+  <ng-container matColumnDef="purchase_number">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Purchased N? </th>
+    <td mat-cell *matCellDef="let element"> {{element.purchase_number}} </td>
+  </ng-container>
+
+  <!-- Img scr Column -->
+  <ng-container matColumnDef="img_src">
+    <th mat-header-cell *matHeaderCellDef > Image </th>
+    <td mat-cell *matCellDef="let element"> <button mat-icon-button color="warn" (click)="showImage(element.img_src)"><mat-icon>remove_red_eye</mat-icon></button> </td>
+  </ng-container>
+
+  <!-- Created_date Column -->
+  <ng-container matColumnDef="created_at">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.created_at | date:short}} </td>
+  </ng-container>
+   
+  <!-- action buttons / modify - delete -->
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef> Action </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-icon-button color="warn" style="color: #0c960b;" (click)="modifyProduct(element)"><mat-icon>update</mat-icon></button>
+        <button mat-icon-button color="warn" style="color:#10499a;"(click)="deleteProduct(element)"><mat-icon>delete_forever</mat-icon></button>
+    </td>
+  </ng-container>
+
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>
+<mat-paginator class="paginator" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+</div>
+
+</div>

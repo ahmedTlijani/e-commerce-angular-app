@@ -1,0 +1,45 @@
+
+<div style="text-align:center">
+  <h3>
+    Welcome to {{ title }}!
+  </h3>
+  
+  <div class="contain">
+    <h1>Vente des produits informatique en ligne</h1>
+    <p>
+      Achats en ligne à petits prix, accessoires auto, ordinateurs, électronique, mode & beauté, santé, jardin, jouets & article de sport, et articles de mariages.
+    </p>
+  </div>
+</div>
+
+  <div class="slide-show">
+    <app-slide-show></app-slide-show>
+  </div>
+
+  <div class="separateur-card"></div>
+
+  <div class="best_products__">
+      <div style="display:flex;">
+        <div class="bestproduct">Our best products <label style="font-size: 12px;color: #333333;">[ purchased 10 times and more! ]</label></div>
+        <button mat-flat-button color="primary" routerLink="/all-product" >Voir la liste de produits</button>
+
+        <span class="fill-space"></span>
+        <div class="btnbest"><!--right content--></div>
+      </div>
+  </div>
+    <div style="padding:10px;">
+    <app-top-products [top_products_list]="top_products_list" ></app-top-products>
+    </div>
+
+    <div class="separateur-card"></div>
+    <div class="see-school__">
+        <div style="display:flex;">
+          <div class="bestproduct">Esip</div>
+          <button mat-flat-button color="primary">Voir Esip</button>
+  
+          <span class="fill-space"></span>
+          <div class="btnbest"><!--right content--></div>
+        </div>
+    </div>
+
+    

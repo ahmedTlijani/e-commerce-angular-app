@@ -1,0 +1,87 @@
+<!-- <p *ngFor="let product_ of products_list_with_qte" >
+ id: {{ product_.product.id }} - qte:  {{ product_.qte }}
+</p> -->
+
+<div class="separateur-card"></div>
+
+<div class="see-chariot__">
+  <div style="display:flex;">
+    <div class="bestproduct">Your shopping cart</div>
+    <button mat-flat-button color="primary">Voir All products</button>
+
+    <span class="fill-space"></span>
+    <div class="btnbest"><!--right content--></div>
+  </div>
+</div>
+
+<div class="separateur-card"></div>
+
+<div class="container text-center">
+
+  <div class="col-md-5 col-sm-12">
+    <div class="bigcart"></div>
+    <h1>Your shopping cart</h1>
+    <div style="text-align: center;">
+      <p style="margin-bottom:50px;text-align:center;display: inline-block;">
+        <b>Votre panier est prêt</b>- voici votre panier qui contient la liste de produits avec leur prix et quantité.
+      </p>
+    </div>
+  </div>
+  
+  <div *ngIf="products_list_with_qte!=0 ;then show_chariot else show_error">here is ignored</div>    
+
+  <ng-template #show_error>
+    <div>
+      <p>Vous pouvez ajouter des produits dans votre panier en cliquant sur</p>             
+      <button mat-flat-button color="primary">Ajouter au panier<mat-icon >shopping_cart</mat-icon></button>
+    </div>
+  </ng-template>
+
+  <!-- showing this when there are orders-->
+  <ng-template #show_chariot>
+
+  <div class="col-md-7 col-sm-12 text-left">
+    <ul>
+      <li class="row list-inline columnCaptions">
+        <span>QTY</span>
+        <span style="width: 81px;display: inline-block;"></span>
+        <span>ITEM</span>
+        <span>Price</span>
+      </li>
+
+      <!-- ngFor goes here -->
+      <li class="row" *ngFor="let product_ of products_list_with_qte">
+        <span class="quantity">{{product_.qte}}</span>
+        <span class="modifybtn" style="display: flex;" >
+            <button (click)="add_product_(product_)" mat-icon-button style="color:#10499a;background-color: #e6edf3;margin-right: 2px;">
+                <mat-icon aria-label="Example icon-button with a heart icon">add</mat-icon>
+            </button>
+            <button (click)="minus_product_(product_)" mat-icon-button style="color:#10499a;background-color: #e6edf3;">
+                <mat-icon aria-label="Example icon-button with a heart icon">remove</mat-icon>
+            </button>
+        </span>
+       
+        <span class="itemName" style="width: 180px;">{{product_.product.title}}</span>
+        <span class="popbtn">
+            <button (click)="removeShoppingCart_(product_)" mat-icon-button style="color:#10499a">
+                <mat-icon aria-label="Example icon-button with a heart icon">remove_shopping_cart</mat-icon>
+            </button>
+        </span>
+        <span class="price">{{product_.qte}} x {{product_.product.price}}TND</span>
+      </li>
+     <!-- ngFor End -->
+
+      <li class="row totals">
+        <span class="itemName">Total:</span>
+        <span class="price">{{ total_panier }} TND</span>
+        <span class="order">
+          <button style="padding: 10px 30px;" mat-flat-button color="primary">ORDER</button>
+          <!-- <a class="text-center">ORDER</a>-->
+        </span>
+      </li>
+    </ul>
+  </div>
+  <!--End condition-->
+  </ng-template>
+
+</div> <!-- End container-->

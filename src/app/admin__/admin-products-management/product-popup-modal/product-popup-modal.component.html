@@ -1,0 +1,52 @@
+<mat-toolbar style="margin-bottom: 30px;">{{ modal_name }} 
+    <span class="fill-space"></span>
+    <button color="primary" mat-icon-button mat-dialog-close>
+        <mat-icon >cancel</mat-icon>
+    </button>
+
+</mat-toolbar>
+
+<form #productForm="ngForm" (ngSubmit)="sendForm($event)">
+
+        <div style="display:flex;margin-bottom: 20px;">
+          <div class="example-container">
+              <mat-form-field>
+                  <input name="title"  matInput placeholder="Product Name*" value="{{ title }}">
+              </mat-form-field>
+           
+              <mat-form-field>
+                  <textarea name="description" matInput placeholder="Description" value="{{ description }}"></textarea>
+              </mat-form-field>
+
+               <mat-form-field>
+                <input name="price" matInput placeholder="Price*" class="example-right-align" value="{{ price }}">
+                <span matPrefix>&nbsp;</span>
+                <span matSuffix>TND</span>
+            </mat-form-field>
+          </div>
+
+          <div class="example-container" style="margin-left: 60px;">
+            <mat-form-field>
+                <input name="qte" min=1 type="number" matInput placeholder="Product Quantity*" value="{{ qte }}">
+            </mat-form-field>
+            
+            <mat-form-field style="margin-top:17px">
+                <input name="img_src" matInput placeholder="Image link" value="{{ img_src }}">
+            </mat-form-field>
+         
+            <mat-form-field>
+                <input name="created_at" [disabled]="true" matInput [matDatepicker]="picker" placeholder="Choose a date" [value]="created_at">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+         </div>
+
+        </div>
+        <label style="color:red">{{ error_message }}</label>
+        <mat-divider></mat-divider>
+
+        <div style="float: right;margin-top: 20px;">
+            <button  mat-raised-button color="primary" type="submit">{{ modal_action }}</button>
+            <button style="margin-left: 10px;"  mat-raised-button type="reset">Clear</button>
+        </div>
+</form>

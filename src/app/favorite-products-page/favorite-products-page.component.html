@@ -1,0 +1,31 @@
+<div class="separateur-card"></div>
+
+<div class="see-favorite__">
+  <div style="display:flex;">
+    <div class="bestproduct">Your favorite choices</div>
+    <button mat-flat-button color="primary">Voir All products</button>
+
+    <span class="fill-space"></span>
+    <div class="btnbest"><!--right content--></div>
+  </div>
+</div>
+
+<div style="display:flex;flex-wrap: wrap;padding-left: 60px;">   
+ 
+  <div *ngIf="fav_products!=0 ;then show_list else show_error">here is ignored</div>    
+
+      <ng-template #show_list>
+          <app-product *ngFor="let product_ of fav_products" [product]="product_" ></app-product>  
+      </ng-template>
+
+      <ng-template #show_error>
+        <div class="nothing_here">
+            Vous n'avez aucun produit favori, vous pouvez ajouter des produits à votre liste
+            en cliquant sur le 
+            <button mat-icon-button color="warn"><mat-icon>favorite_border</mat-icon></button>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+      </ng-template>
+
+  </div>
+  <div class="separateur-card"></div>

@@ -1,0 +1,49 @@
+<mat-toolbar color="primary">
+  <div class="example-button-row">
+    <button mat-button routerLink="/home">
+      <mat-icon aria-label="Example icon-button with a heart icon">shop</mat-icon>
+      Product Market
+    </button>
+    <button mat-button routerLink="/all-product">Liste de produits</button>
+  </div>  
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="fill-space"></span>
+<!--
+  <button matTooltip="Changer théme" mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>format_color_fill</mat-icon>
+  </button>
+  
+  <mat-menu #menu="matMenu" >
+       list goes here 
+      </mat-menu>
+-->
+
+<div class="example-button-row">
+  <button mat-button routerLink="/manage-products" >Admin <mat-icon >person</mat-icon></button>
+ </div>
+
+ 
+
+  <div class="example-button-row">
+    <button mat-button>
+      contact
+      <mat-icon >email</mat-icon>
+      </button>
+   </div>
+
+  <div class="example-button-row">
+    <button mat-button routerLink="/favorite-products">
+      
+      <mat-icon >favorite</mat-icon> {{ favorite }} <!-- matBadge="{{ chariot}}" matBadgeColor="accent" -->
+      </button>
+   </div>  
+
+  <div class="example-button-row">
+    <button mat-button routerLink="/chariot-products">
+      
+      <mat-icon>shopping_cart</mat-icon> {{ chariot }}
+      </button>
+   </div>  
+
+</mat-toolbar>

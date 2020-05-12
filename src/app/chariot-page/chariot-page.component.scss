@@ -1,0 +1,167 @@
+//https://demo.tutorialzine.com/2014/04/responsive-shopping-cart-layout-twitter-bootstrap-3/#
+@import url('https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css');
+
+.container.text-center {
+    padding: 0 32px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+   // margin-bottom: -50px;
+    background-color: #f2f6f9;
+}
+.col-md-5.col-sm-12 {
+    padding: 0;
+}
+.bigcart {
+    background: url("../../assets/images/cart.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 150px;
+    background-size: contain;
+}
+.col-md-5.col-sm-12 h1 {
+    color: #595c5f;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    /* text-align: left; */
+}
+.col-md-5.col-sm-12 p {
+    color: #898e92;
+    line-height: 1.5;
+    max-width: 400px;
+    text-align: justify;
+}
+.col-md-7.col-sm-12 {
+    padding-left: 0px;
+    margin-bottom: 72px;
+}
+ul {
+    list-style-type: none;
+}
+.columnCaptions {
+    color: #7e93a7;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 0;
+    box-shadow: 0 0 0;
+    background-color: #f2f6f9 !important;
+ }
+.row {
+    box-shadow: 0 1px 0 #e1e5e8;
+    padding-bottom: 0;
+    padding-left: 15px;
+    background-color: #ffffff;
+    margin-bottom: 11px;
+}
+.row span {
+    padding: 20px 0 3px 0;
+}
+.quantity {
+    color: #4ea6bc;
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    //width: 42px;
+    padding-left: 7px;
+}
+
+.itemName {
+    color: #727578;
+    font-size: 16px;
+    font-weight: bold;
+    float: left;
+    padding-left: 25px;
+}
+.popbtn {
+    background-color: #e6edf3;
+    margin-left: 25px;
+    height: 63px;
+    width: 40px;
+    padding: 12px 0 0 0px !important;
+    float: right;
+    cursor: pointer;
+}
+.price {
+    color: #10499a;
+    font-size: 18px;
+    font-weight: bold;
+    float: right;
+}
+.totals {
+    background-color: #f2f6f9;
+}
+.totals .itemName {
+    margin-top: 1px;
+}
+.totals span {
+    padding: 40px 15px 40px 0;
+}
+.totals .price {
+    float: left;
+}
+.totals .order {
+    float: right;
+    padding: 0;
+    margin-top: 40px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+.columnCaptions span:first-child {
+    padding-left: 0px;
+}
+.columnCaptions span {
+    padding: 0 21px 0 0;
+}
+.columnCaptions span:last-child {
+    float: right;
+    padding-right: 72px;
+}
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #858e97;
+}
+.order a {
+    background-color: #10499a;
+    color: #fbfffa;
+    font-weight: bold;
+    border-radius: 2px;
+    padding: 20px 30px;
+    text-decoration: none;
+}
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+    margin-left: -5px;
+    box-shadow: 0 0px 0 #e1e5e8;
+}
+
+
+.modifybtn
+{
+    color: #4ea6bc;
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    //margin: -9px 4px 0px -18px;
+    display: flex;
+    margin-left: 15px;
+    margin-right: 16px;
+    margin-top: -8px;
+    padding-top: 20px;
+    //background-color: #e6edf3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
