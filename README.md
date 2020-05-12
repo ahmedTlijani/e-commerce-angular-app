@@ -5,6 +5,15 @@
 ## The client app Using Angular framework
 [Check out the server app here.][1]
 
+
+Screenshots
+------------
+
+<p align="center">
+    <img src="https://github.com/ahmedTlijani/e-commerce-angular-app/blob/master/images/home.JPG">
+</p>
+
+
 # NgProductsApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.1.
